@@ -7,12 +7,13 @@ import java.util.List;
 public class Polynomial {
 	
 	private List<PolyTerm> list;
-	private boolean isRational; //true- it is a rational scalar. real scalar otherwise.
+	private boolean isRational; //set to true if rational scalar. False is real scalar
 	
-	public Polynomial(String polynom, boolean isRational) {
+	public Polynomial(String polynom, boolean isRational) { //Constructor
 		this.isRational=isRational;
 		this.list=new LinkedList<>();
-		String currentPoly="";
+		String currentPoly=""; // resets current polynomial to prepare for new entry
+		
 		for(int i=0;i<polynom.length();i++)
 		{
 			if((polynom.charAt(i)=='+' || polynom.charAt(i)=='-') &&  i!=0) {

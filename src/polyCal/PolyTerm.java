@@ -3,7 +3,7 @@ package polyCal;
 public class PolyTerm implements Comparable<PolyTerm>{
 	private Scalar coefficient;
 	private int exponent;
-	private boolean isRational; //true- it is a rational scalar. real scalar otherwise.
+	private boolean isRational; //set to true if rational scalar. False is real scalar
 	
 	public PolyTerm(Scalar coefficient, int exponent, boolean isRational) {
 		if(exponent<0)

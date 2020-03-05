@@ -10,8 +10,13 @@ public class Scalar{
 		this.num=num;
 	}
 
-	public double getNum() { return num; }
-	public void setNum(double num) { this.num=num;}		
+	public double getNum() { 
+		return num;
+	}
+	
+	public void setNum(double num) {
+		this.num=num;
+	}		
 	
 	public Scalar add(Scalar s) {
 		double n;
