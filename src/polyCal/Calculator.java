@@ -36,8 +36,9 @@ public class Calculator {
                             
                             System.out.println("The solution is:");
                             
-                            Polynomial poly1=new Polynomial(p1,false);
-        					Polynomial poly2=new Polynomial(p2,false);
+                            //solution
+                            Polynomial poly1=new Polynomial(p1);
+        					Polynomial poly2=new Polynomial(p2);
         					System.out.println(poly1.add(poly2));
         					
                             break;
@@ -51,10 +52,11 @@ public class Calculator {
 		                    
 		                    
 		                    System.out.println("The solution is:");
-		                    
-		                	Polynomial poly1=new Polynomial(p1,false);
-							Polynomial poly2=new Polynomial(p2,false);
-							System.out.println(poly1.mul(poly2));
+                            
+                            //solution
+		                	Polynomial poly1=new Polynomial(p1);
+							Polynomial poly2=new Polynomial(p2);
+							System.out.println(poly1.mult(poly2));
 							
                             break;
                 }
@@ -67,8 +69,9 @@ public class Calculator {
 		                    
 		                    
 		                    System.out.println("The solution is:");
-		                    
-		                    Polynomial poly1=new Polynomial(p1,false);
+                            
+                            //solution
+		                    Polynomial poly1=new Polynomial(p1);
 							Scalar scalar= new Scalar(Double.parseDouble(number));
 							System.out.println(poly1.evaluate(scalar));
                             
@@ -78,9 +81,11 @@ public class Calculator {
 		                	System.out.println("Please insert the polynomial ");
 		    				p1=scanner.next();
 		    				
-		                	Polynomial poly1=new Polynomial(p1,false);
-							System.out.println("The derivative polynomial is:");
-							System.out.println(poly1.derivate());
+		                	Polynomial poly1=new Polynomial(p1);
+		                	
+							System.out.println("The derivative polynomial is:");                            
+                            //solution
+							System.out.println(poly1.derivative());
 
 							break;
                 }
