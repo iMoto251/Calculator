@@ -1,12 +1,8 @@
-package Poly;
+package polyCal;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
-
-import Scalar.RationalScalar;
-import Scalar.RealScalar;
-import Scalar.Scalar;
 
 public class Polynomial {
 	
@@ -113,14 +109,15 @@ public class Polynomial {
 	public Scalar evaluate(Scalar scalar) {
 		Iterator<PolyTerm> it1=this.list.iterator();
 		if(this.isRational) {
-			Scalar ans=new RationalScalar(0, 1);
+			//Take this out
+			Scalar ans=new Scalar(1);
 			while(it1.hasNext()) {
 				ans=ans.add(it1.next().evaluate(scalar));
 			}
 			return ans;
 		}
 		else {
-			Scalar ans=new RealScalar(0);
+			Scalar ans=new Scalar(0);
 			while(it1.hasNext()) {
 				ans=ans.add(it1.next().evaluate(scalar));
 			}

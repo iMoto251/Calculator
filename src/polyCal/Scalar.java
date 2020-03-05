@@ -1,12 +1,12 @@
-package Scalar;
+package polyCal;
 
 import java.text.DecimalFormat;
 
-public class RealScalar implements Scalar{
+public class Scalar{
 
 	private double num;
 	
-	public RealScalar(double num) {
+	public Scalar(double num) {
 		this.num=num;
 	}
 
@@ -15,42 +15,42 @@ public class RealScalar implements Scalar{
 	
 	public Scalar add(Scalar s) {
 		double n;
-		if(!(s instanceof RealScalar))
+		if(!(s instanceof Scalar))
 			throw new RuntimeException("Not a real Scalar");
-		RealScalar scalar=(RealScalar)s;
+		Scalar scalar=(Scalar)s;
 		n=num+scalar.getNum();
-		return new RealScalar(n);
+		return new Scalar(n);
 	}
 	
 	public Scalar mul(Scalar s) {
 		double n;
-		if(!(s instanceof RealScalar))
+		if(!(s instanceof Scalar))
 			throw new RuntimeException("Not a real Scalar");
-		RealScalar scalar=(RealScalar)s;
+		Scalar scalar=(Scalar)s;
 		n=num*scalar.getNum();
-		return new RealScalar(n);
+		return new Scalar(n);
 	}
 	
 	public Scalar mul(int num) {
-		return new RealScalar(num*getNum());
+		return new Scalar(num*getNum());
 	}
 	
 	public Scalar pow(int exponent) {
 		double n;
 		n=Math.pow(num, exponent);
-		return new RealScalar(n);
+		return new Scalar(n);
 	} 
 	
 	public Scalar neg() {
 		double n;
 		n=(-1)*getNum();
-		return new RealScalar(n);
+		return new Scalar(n);
 	} 
 	
 	public boolean equals(Scalar s) {
-		if(!(s instanceof RealScalar))
+		if(!(s instanceof Scalar))
 			throw new RuntimeException("Not a real Scalar");
-		RealScalar scalar=(RealScalar)s;
+		Scalar scalar=(Scalar)s;
 		return num==scalar.getNum();	
 	} 
 	

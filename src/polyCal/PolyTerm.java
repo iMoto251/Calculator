@@ -1,7 +1,4 @@
-package Poly;
-import Scalar.RationalScalar;
-import Scalar.RealScalar;
-import Scalar.Scalar;
+package polyCal;
 
 public class PolyTerm implements Comparable<PolyTerm>{
 	private Scalar coefficient;
@@ -62,7 +59,7 @@ public class PolyTerm implements Comparable<PolyTerm>{
 				numerator="1";
 			if(divisor.length()==0)
 				divisor="1";
-			this.coefficient=new RationalScalar(Integer.parseInt(numerator), Integer.parseInt(divisor));
+			//this.coefficient=new RationalScalar(Integer.parseInt(numerator), Integer.parseInt(divisor));
 		}
 		else {
 			if(coefficient.length()==0 || coefficient.charAt(coefficient.length()-1)=='+') 
@@ -71,9 +68,9 @@ public class PolyTerm implements Comparable<PolyTerm>{
 				coefficient="-1";
 			
 			if(coefficient.contains("/"))
-				this.coefficient=new RealScalar(Double.parseDouble(numerator)/Double.parseDouble(divisor));
+				this.coefficient=new Scalar(Double.parseDouble(numerator)/Double.parseDouble(divisor));
 			else
-				this.coefficient=new RealScalar(Double.parseDouble(coefficient));
+				this.coefficient=new Scalar(Double.parseDouble(coefficient));
 		}
 	}
 	
